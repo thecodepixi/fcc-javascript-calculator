@@ -115,6 +115,7 @@ class Calculator extends React.Component {
   performCalculation = () => {
     this.setState( prevState => ({
       ...prevState,
+      // eslint-disable-next-line
       display: [eval( prevState.currentOperation.concat(prevState.display).join('') )],
       previousOperator: "=",
       currentOperation: []
